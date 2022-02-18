@@ -18,7 +18,7 @@ namespace HerancaContForEmployer.Entities
             InterestRate = interestRate;
         }
 
-        public void UpdateBalace()
+        public void UpdateBalance()
         {
             Balance += Balance * InterestRate;
         }

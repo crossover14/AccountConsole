@@ -16,13 +16,13 @@ namespace HerancaContForEmployer.Entities
             LoanLimit = loanLimit;
         }
 
-        public void Loam (double amount)
+        public void Loan (double amount)
         {
             if (amount <= LoanLimit)
             {
                 Balance += amount;
             }
-            else Console.WriteLine("NEGADO!!!");
+           
 
 
 
