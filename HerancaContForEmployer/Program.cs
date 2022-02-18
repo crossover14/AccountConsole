@@ -8,13 +8,24 @@ namespace HerancaContForEmployer
     {
         static void Main(string[] args)
         {
-            BuniesAccount account = new BuniesAccount( 8010, "Bob Brow", 100.0, 500.0);
+            Account acc = new Account(1001, "Alex", 0.0);
 
-            Console.WriteLine(account.Balance);
+            BuniesAccount bacc = new BuniesAccount(1002, "Maria", 0.0, 500.0);
+
+            //UpCasting
+
+            Account acc1 = bacc;
+            Account acc2 = new BuniesAccount(1003, "Bob", 0.0, 200.0);
+            Account acc3 = new SavingsAccount(1004, "Anna", 0.0, 0.01);
+
+            //DonwCasting
+            BuniesAccount acc4 = (BuniesAccount)acc2;
+            acc4.Loam(100.0);
+
+            // BuniesAccount acc5 = (BuniesAccount)acc3;
 
 
-            //Somente em subclasse pode ser alterado com o "protected"!!!!!!
-            //account.Balance = 200.0
+
         }
 
 
